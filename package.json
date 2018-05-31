@@ -1,7 +1,7 @@
 {
-  "name": "Carmania",
+  "name": "pregnancy_app",
   "version": "1.0.0",
-  "description": "Car clinic",
+  "description": "Pregnancy app",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,10 +10,11 @@
   "engines": {
     "node": "9.4.0"
   },
-  "author": "TSS induction team1",
+  "author": "nHub",
   "license": "ISC",
   "dependencies": {
     "assert": "^1.4.1",
+    "bcrypt": "^2.0.1",
     "bcryptjs": "^2.4.3",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
@@ -25,6 +26,7 @@
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.2.2",
     "lodash": "^4.17.4",
     "log4js": "^2.5.3",
     "method-override": "^2.3.10",
