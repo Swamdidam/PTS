@@ -1,9 +1,23 @@
 'use strict';
 
+
+/***********************
+ * Module dependencies *
+ ***********************/
+const express = require('express');
+const jwt = require('jsonwebtoken');
 const _ = require('lodash');
 const express = require('express');
 const router = express.Router();
 const Hospital = require('../models/hospital');
+
+const user = require('./user');
+
+/********************
+ * Router instance  *
+ ********************/
+const router = express.Router();
+
 
      /****************************************************
       *  Create Hospital                 *
@@ -89,8 +103,13 @@ router.get('/hosiptal/:one', (req, res)=>{
             })
     })
     
+
+/***********************
+ *   Routes            *
+ **********************/
+router.use('/', user);
+
 /******************
  * Export router  *
  ******************/
 module.exports = router;
-
