@@ -29,13 +29,13 @@ router.post('/register', (req, res) => {
      var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-          user: 'churchsapps@gmail.com',
-          pass: 'pass_w0rd'
+          user: 'pregnancyappdemo@gmail.com',
+          pass: 'pass word'
   }
   });
 
   var mailOptions = {
-      from: 'churchsapps@gmail.com',
+      from: 'pregnancyappdemo@gmail.com',
       to: User.email,
       subject: 'Pregnancy App',
       text: `Hello ${firstName} ${lastName},
@@ -130,12 +130,12 @@ router.post('/forgot_pword', (req, res) => {
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'churchsapps@gmail.com',
-                pass: 'pass_w0rd'
+                user: 'pregnancyappdemo@gmail.com',
+                pass: 'pass word'
         }
         });
         var mailOptions = {
-            from: 'churchsapps@gmail.com',
+            from: 'pregnancyappdemo@gmail.com',
             to: user.email,
             subject: 'Link to reset your password',
             text: `Hi,
@@ -189,7 +189,7 @@ router.post('/reset_pword', (req, res, next)=> {
               } else {
                 var mailOptions = {
                     to: user.email,
-                    from: 'churchsapps@gmail.com',
+                    from: 'pregnancyappdemo@gmail.com',
                     subject: `Password was successfully reset`,
                     text: `Hi,
  
