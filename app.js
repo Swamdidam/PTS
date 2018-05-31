@@ -1,5 +1,3 @@
-
-
 'use strict';
 
 require('dotenv').config();
@@ -12,8 +10,8 @@ const
     log4js              = require('log4js'),
     compress          	= require("compression"),
     bodyParser          = require("body-parser"),
-    cookieParser    	= require("cookie-parser"),
-    logger          	= require("morgan"),
+    cookieParser    	  = require("cookie-parser"),
+    logger          	  = require("morgan"),
     mongoose          	= require("mongoose"),
     cors              	=require('cors'),
     log 		            = require('./utils/logger').getLogger('APP');
@@ -26,7 +24,7 @@ const app = express();
 const
     port = process.env.PORT,
     env = process.env.NODE_ENV,
-    DBURL = process.env.DBURL;
+    DBURL = process.env.DBURL;  
 let db;
 
 
