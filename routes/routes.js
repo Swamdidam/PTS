@@ -4,9 +4,11 @@
  * Dependencies
 */
 const
-    express = require ('express'),
-    router = express.Router(),
-    pregnacyTrack = require('../models/pregnacyTracker');
+    express                 = require ('express'),
+    router                  = express.Router(),
+    jwt                     = require('jsonwebtoken'),
+    user                    = require('./user'),
+    pregnacyTrack           = require('../models/pregnacyTracker');
 
 router.post('/pregnacyTrackiing', (req, res) => {
 
@@ -215,5 +217,8 @@ console.log(diffDays + ' Days after LMP');
         })
 })
 
+/******************
+ * Export router  *
+ ******************/
+module.exports = router;
 
-module.exports = router
