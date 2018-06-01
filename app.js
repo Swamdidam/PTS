@@ -14,7 +14,8 @@ const
     logger          	  = require("morgan"),
     mongoose          	= require("mongoose"),
     cors              	=require('cors'),
-    log 		            = require('./utils/logger').getLogger('APP');
+    log 		            = require('./utils/logger').getLogger('APP'),
+    routes              = require('./routes/routes');
 
 const app = express();
 
@@ -30,7 +31,7 @@ let db;
 
 app.set('port', port);
 app.set('env', env);
-const routes = require('./routes/routes');
+
 
 
 mongoose.Promise = require('bluebird');
@@ -80,7 +81,7 @@ app.use((req, res, next) => {
 app.get("/pts", (req, res) => {
     return res.status(200).json({info:"welcome to PTS Home"})
 })
-app.use('/pts', require('./routes/routes'));
+app.use('/pts', routes);
 
 
 
