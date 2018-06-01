@@ -14,6 +14,9 @@ const    mongoose           = require('mongoose'),
  */
 //=============================================================================
 const pregnacyTracker = mongoose.Schema({
+    email: {
+        type: String
+    },
     LMP: {
         type: String,
     },  
