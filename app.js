@@ -1,5 +1,3 @@
-
-
 'use strict';
 
 require('dotenv').config();
@@ -27,7 +25,7 @@ const app = express();
 const
     port = process.env.PORT,
     env = process.env.NODE_ENV,
-    DBURL = process.env.DBURL;
+    DBURL = process.env.DBURL;  
 let db;
 
 
