@@ -6,8 +6,8 @@
 //=============================================================================
 const
     http = require('http'),
-    app = require('./app'),
-    log = require('./utils/logger').getLogger('APP');
+    app  = require('./app'),
+    log  = require('./utils/logger').getLogger('APP');
 
 //=============================================================================
 /**
